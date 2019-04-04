@@ -18,7 +18,7 @@ class Blockchain {
     this.chain.push(newBlock);
   }
 
-  replaceChain(chain, onSuccess) {
+  replaceChain(chain, validateTransactions, onSuccess) {
     if (chain.length <= this.chain.length) {
       console.error("the incoming chain must be longer");
       return;
@@ -29,8 +29,8 @@ class Blockchain {
       return;
     }
 
-    if (!this.validTransactionData({ chain })) {
-      console.error("the incoming chain ha invalid data");
+    if (validateTransactions && !this.validTransactionData({ chain })) {
+      console.error("the incoming chain has invalid data");
       return;
     }
 
