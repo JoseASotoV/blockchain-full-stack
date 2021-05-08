@@ -35,7 +35,7 @@
     "express": "^4.17.1",
     "hex-to-binary": "^1.0.1",
     "history": "^4.9.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "parcel-bundler": "^1.12.3",
     "pubnub": "^4.24.3",
     "react": "^16.8.6",
